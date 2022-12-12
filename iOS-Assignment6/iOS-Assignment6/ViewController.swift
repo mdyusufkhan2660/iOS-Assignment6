@@ -34,8 +34,17 @@ class ViewController: UIViewController {
             performSegue(withIdentifier: "showThird", sender: self)
         }
     }
-    
-    
+    @IBAction func panGesture(_ sender: UIPanGestureRecognizer) {
+        //Left swipe
+        if(sender.state.rawValue == 1){
+            print("Pan gesture")
+            tapcount = 0
+            tapLabel.text = "Taps: " + String(tapcount)
+            performSegue(withIdentifier: "showForth", sender: self)
+            
+        }
+        
+    }
     override func viewDidLoad() {
         tapcount = 0
         super.viewDidLoad()

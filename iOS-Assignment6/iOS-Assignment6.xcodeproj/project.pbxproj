@@ -18,6 +18,7 @@
 		506684582940E68E00FABB78 /* iOS_Assignment6UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506684572940E68E00FABB78 /* iOS_Assignment6UITestsLaunchTests.swift */; };
 		50AED845294783A400573120 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AED844294783A400573120 /* SecondViewController.swift */; };
 		50AED84729478E5700573120 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AED84629478E5700573120 /* ThirdViewController.swift */; };
+		50AED84929479BDA00573120 /* ForthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AED84829479BDA00573120 /* ForthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		506684572940E68E00FABB78 /* iOS_Assignment6UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Assignment6UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		50AED844294783A400573120 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		50AED84629478E5700573120 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		50AED84829479BDA00573120 /* ForthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				506684422940E68E00FABB78 /* Info.plist */,
 				50AED844294783A400573120 /* SecondViewController.swift */,
 				50AED84629478E5700573120 /* ThirdViewController.swift */,
+				50AED84829479BDA00573120 /* ForthViewController.swift */,
 			);
 			path = "iOS-Assignment6";
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50AED84929479BDA00573120 /* ForthViewController.swift in Sources */,
 				50AED845294783A400573120 /* SecondViewController.swift in Sources */,
 				506684392940E68C00FABB78 /* ViewController.swift in Sources */,
 				50AED84729478E5700573120 /* ThirdViewController.swift in Sources */,

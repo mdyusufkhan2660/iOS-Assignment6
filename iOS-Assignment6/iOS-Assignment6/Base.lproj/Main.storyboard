@@ -34,6 +34,7 @@
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="jG0-fW-Ov5" appends="YES" id="yso-PL-21j"/>
                             <outletCollection property="gestureRecognizers" destination="kAi-DO-eyH" appends="YES" id="reR-YU-dUq"/>
+                            <outletCollection property="gestureRecognizers" destination="hxh-bU-QO3" appends="YES" id="50f-KO-GEh"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="ycN-Rc-yhI"/>
@@ -42,6 +43,7 @@
                         <outlet property="tapLabel" destination="lLO-Kj-cVg" id="dle-sK-QBX"/>
                         <segue destination="VhP-WX-Ttf" kind="show" identifier="showSecond" id="caI-Fv-tnZ"/>
                         <segue destination="oar-k9-AiI" kind="show" identifier="showThird" id="Vl5-uQ-LWs"/>
+                        <segue destination="TGa-Gb-MBq" kind="show" identifier="showForth" id="a3W-BJ-4Vk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -55,6 +57,11 @@
                         <action selector="longPress:" destination="BYZ-38-t0r" id="u1U-mm-ErV"/>
                     </connections>
                 </pongPressGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="hxh-bU-QO3">
+                    <connections>
+                        <action selector="panGesture:" destination="BYZ-38-t0r" id="9US-mx-fqQ"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1094" y="4"/>
         </scene>
@@ -103,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ex3-gv-N9a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2127" y="-468"/>
+            <point key="canvasLocation" x="2196" y="-753"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="kXM-iE-LhS">
@@ -132,7 +139,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D7j-o6-2Hi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2126" y="295"/>
+            <point key="canvasLocation" x="2195" y="4"/>
+        </scene>
+        <!--Forth View Controller-->
+        <scene sceneID="LVu-Yw-uk9">
+            <objects>
+                <viewController id="TGa-Gb-MBq" customClass="ForthViewController" customModule="iOS_Assignment6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zBE-eQ-LId">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6pO-w2-ACA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="86J-VP-FEI" appends="YES" id="vNa-dk-RAD"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="8xM-iD-vgW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FxO-ei-4Vs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="86J-VP-FEI">
+                    <connections>
+                        <action selector="pinchGesture:" destination="TGa-Gb-MBq" id="Myq-zG-AOC"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2195" y="797"/>
         </scene>
     </scenes>
     <resources>
