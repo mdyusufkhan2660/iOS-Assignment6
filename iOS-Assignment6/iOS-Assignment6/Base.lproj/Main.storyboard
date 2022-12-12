@@ -17,12 +17,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="jG0-fW-Ov5" appends="YES" id="yso-PL-21j"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="ycN-Rc-yhI"/>
+                    <connections>
+                        <outlet property="myView" destination="8bC-Xf-vdC" id="4jK-vF-zBj"/>
+                        <segue destination="VhP-WX-Ttf" kind="show" identifier="showSecond" id="caI-Fv-tnZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jG0-fW-Ov5">
+                    <connections>
+                        <action selector="didTapView:" destination="BYZ-38-t0r" id="vMc-lb-Qk1"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1031.2977099236641" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1094" y="4"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yof-nG-dag">
@@ -41,6 +54,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQh-wk-ZHE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="104.58015267175573" y="3.5211267605633805"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="hfw-f7-2Cv">
+            <objects>
+                <viewController storyboardIdentifier="secondView" id="VhP-WX-Ttf" customClass="SecondViewController" customModule="iOS_Assignment6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gZ4-Zl-iga">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Usf-xs-xF4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CAC-mG-va6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ex3-gv-N9a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2172" y="4"/>
         </scene>
     </scenes>
     <resources>
