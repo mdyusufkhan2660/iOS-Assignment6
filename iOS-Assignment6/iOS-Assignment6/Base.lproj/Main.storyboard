@@ -153,6 +153,8 @@
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="86J-VP-FEI" appends="YES" id="vNa-dk-RAD"/>
+                            <outletCollection property="gestureRecognizers" destination="vF6-fz-lGs" appends="YES" id="VYz-H2-Sb6"/>
+                            <outletCollection property="gestureRecognizers" destination="QuV-GV-qee" appends="YES" id="dWm-Tn-Icy"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="8xM-iD-vgW"/>
@@ -163,6 +165,16 @@
                         <action selector="pinchGesture:" destination="TGa-Gb-MBq" id="Myq-zG-AOC"/>
                     </connections>
                 </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="vF6-fz-lGs">
+                    <connections>
+                        <action selector="rotaionGesture:" destination="TGa-Gb-MBq" id="0uT-4T-JbS"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="QuV-GV-qee">
+                    <connections>
+                        <action selector="edgePanGesture:" destination="TGa-Gb-MBq" id="TW3-46-Bbq"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2195" y="797"/>
         </scene>

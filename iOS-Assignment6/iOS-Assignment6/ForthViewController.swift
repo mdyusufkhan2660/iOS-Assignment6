@@ -22,6 +22,11 @@ class ForthViewController: UIViewController {
         view.addSubview(myView)
         myView.frame = CGRect(x:0, y:0, width: size, height: size)
         myView.center = view.center
+        
+        let edgePan = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(edgePanGesture))
+           edgePan.edges = .right
+
+        view.addGestureRecognizer(edgePan)
 
         // Do any additional setup after loading the view.
     }
@@ -34,6 +39,18 @@ class ForthViewController: UIViewController {
         }
     }
     
+    @IBAction func rotaionGesture(_ sender: UIRotationGestureRecognizer) {
+        if(sender.state == .changed){
+            myView.transform = CGAffineTransform(rotationAngle: sender.rotation)
+            print("Angle: \(sender.rotation)")
+        }
+    }
+    @IBAction func edgePanGesture(_ sender: UIScreenEdgePanGestureRecognizer) {
+        
+        if (sender.state == .recognized) {
+                print("Screen edge swiped!")
+            }
+    }
     /*
     // MARK: - Navigation
 
