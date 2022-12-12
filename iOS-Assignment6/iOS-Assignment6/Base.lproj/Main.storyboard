@@ -15,17 +15,33 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taps: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLO-Kj-cVg">
+                                <rect key="frame" x="10" y="408" width="373" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="lLO-Kj-cVg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="3hK-bC-C6d"/>
+                            <constraint firstItem="lLO-Kj-cVg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jjk-bq-wys"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lLO-Kj-cVg" secondAttribute="trailing" constant="10" id="ly2-bt-r2x"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="jG0-fW-Ov5" appends="YES" id="yso-PL-21j"/>
+                            <outletCollection property="gestureRecognizers" destination="kAi-DO-eyH" appends="YES" id="reR-YU-dUq"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="ycN-Rc-yhI"/>
                     <connections>
                         <outlet property="myView" destination="8bC-Xf-vdC" id="4jK-vF-zBj"/>
+                        <outlet property="tapLabel" destination="lLO-Kj-cVg" id="dle-sK-QBX"/>
                         <segue destination="VhP-WX-Ttf" kind="show" identifier="showSecond" id="caI-Fv-tnZ"/>
+                        <segue destination="oar-k9-AiI" kind="show" identifier="showThird" id="Vl5-uQ-LWs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -34,6 +50,11 @@
                         <action selector="didTapView:" destination="BYZ-38-t0r" id="vMc-lb-Qk1"/>
                     </connections>
                 </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="kAi-DO-eyH">
+                    <connections>
+                        <action selector="longPress:" destination="BYZ-38-t0r" id="u1U-mm-ErV"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1094" y="4"/>
         </scene>
@@ -62,14 +83,56 @@
                     <view key="view" contentMode="scaleToFill" id="gZ4-Zl-iga">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAE-e2-wjh">
+                                <rect key="frame" x="10" y="408" width="373" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Usf-xs-xF4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Usf-xs-xF4" firstAttribute="trailing" secondItem="BAE-e2-wjh" secondAttribute="trailing" constant="10" id="bJd-q6-d7i"/>
+                            <constraint firstItem="BAE-e2-wjh" firstAttribute="centerY" secondItem="gZ4-Zl-iga" secondAttribute="centerY" id="nOo-XY-lpB"/>
+                            <constraint firstItem="BAE-e2-wjh" firstAttribute="leading" secondItem="Usf-xs-xF4" secondAttribute="leading" constant="10" id="pkk-fv-oAR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CAC-mG-va6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ex3-gv-N9a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2172" y="4"/>
+            <point key="canvasLocation" x="2127" y="-468"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="kXM-iE-LhS">
+            <objects>
+                <viewController storyboardIdentifier="thirdView" id="oar-k9-AiI" customClass="ThirdViewController" customModule="iOS_Assignment6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wf0-WG-FRa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Third View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8p7-Bd-4mh">
+                                <rect key="frame" x="10" y="408" width="373" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iXd-pt-Ulb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8p7-Bd-4mh" firstAttribute="centerY" secondItem="wf0-WG-FRa" secondAttribute="centerY" id="Nxw-DY-3GP"/>
+                            <constraint firstItem="8p7-Bd-4mh" firstAttribute="leading" secondItem="iXd-pt-Ulb" secondAttribute="leading" constant="10" id="TP7-wt-GQg"/>
+                            <constraint firstItem="iXd-pt-Ulb" firstAttribute="trailing" secondItem="8p7-Bd-4mh" secondAttribute="trailing" constant="10" id="m2B-KW-mzf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z9X-XL-U9A"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D7j-o6-2Hi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2126" y="295"/>
         </scene>
     </scenes>
     <resources>

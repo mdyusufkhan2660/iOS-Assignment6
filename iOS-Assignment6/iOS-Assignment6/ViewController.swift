@@ -8,36 +8,42 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var tapcount = 0
+    @IBOutlet weak var tapLabel: UILabel!
+    @IBOutlet var myView: UIView!
     
     @IBAction func didTapView(_ sender: UITapGestureRecognizer) {
         
         if sender.numberOfTapsRequired == 1 {
             print("Single Tap")
+            tapcount+=1
+            tapLabel.text = "Taps: " + String(tapcount)
         }
         else if(sender.numberOfTapsRequired == 2){
+            tapcount = 0
+            tapLabel.text = "Taps: " + String(tapcount)
             print("Double Tap")
             self.performSegue(withIdentifier: "showSecond", sender: self)
         }
-        
     }
-    
-    @IBOutlet var myView: UIView!{
-        didSet{
+    @IBAction func longPress(_ sender: UILongPressGestureRecognizer) {
+        if(sender.state.rawValue == 1){
+            print("Long tap")
+            tapcount = 0
+            tapLabel.text = "Taps: " + String(tapcount)
+            performSegue(withIdentifier: "showThird", sender: self)
         }
     }
     
+    
     override func viewDidLoad() {
+        tapcount = 0
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapView(_:)))
-        
-        // Configure Tap Gesture Recognizer
         tapGestureRecognizer.numberOfTapsRequired = 2
-
-           // Add Tap Gesture Recognizer
         myView.addGestureRecognizer(tapGestureRecognizer)
-
     }
 }
 
